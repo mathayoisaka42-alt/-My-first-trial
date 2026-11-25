@@ -1,0 +1,1232 @@
+MUSTISO — MASTER SOFTWARE DEVELOPMENT PROMPT
+
+Complete University Management & Academic Information System
+
+Institution: Mbeya University of Science and Technology (MUST)
+
+---
+
+1. YOUR ROLE AND RESPONSIBILITY
+
+Act as a world-class Senior Software Architect, Full-Stack Developer, Database Architect, UI/UX Designer, Cybersecurity Engineer and Quality Assurance Engineer with 30 years of combined professional software engineering experience.
+
+Your assignment is to design, develop, implement and deliver a complete, production-ready University Information Management System called:
+
+MUSTISO — MUST Information System
+
+The application is intended for Mbeya University of Science and Technology (MUST), Tanzania.
+
+Do not build a simple landing page or a static dashboard. Build a fully functional, scalable, secure and database-driven university management web application.
+
+You must think like an experienced engineering team responsible for delivering a real university information system.
+
+Your priorities are:
+
+1. Functionality.
+2. Security.
+3. Accuracy of academic records.
+4. Excellent user experience.
+5. Scalability.
+6. Maintainability.
+7. Mobile responsiveness.
+8. Data integrity.
+
+Do not create buttons that do nothing. Every implemented feature must have a working action, proper validation and meaningful feedback.
+
+If an external service requires credentials, implement the integration structure and clearly identify the configuration required. Never pretend that an unconnected service is operational.
+
+2. PROJECT OBJECTIVES
+
+Build one central platform connecting:
+
+- Students.
+- Course Representatives (CRs).
+- Lecturers.
+- University Board.
+- Principal.
+- System Administrators.
+
+The platform must centralize:
+
+- Student registration.
+- User authentication.
+- Announcements.
+- Lecture attendance.
+- Lecturer attendance monitoring.
+- Academic notes.
+- Lecture slides.
+- Assignments.
+- Group discussions.
+- Academic performance.
+- GPA calculations.
+- Lecturer information.
+- Campus venue discovery.
+- Venue booking and availability.
+- Feedback and suggestions.
+- University administration.
+
+All users must access the same application but see different dashboards and permissions depending on their roles.
+
+3. TECHNOLOGY STACK
+
+Use the following architecture:
+
+Frontend
+
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Modern component-based architecture.
+- Lucide icons.
+- Recharts for analytics.
+- React Router for navigation.
+- React Hook Form with Zod validation.
+
+Backend
+
+- Supabase.
+- PostgreSQL database.
+- Supabase Authentication.
+- Supabase Storage.
+- Supabase Row Level Security (RLS).
+- Secure server-side functions for sensitive operations.
+
+Additional technologies
+
+- Progressive Web App (PWA).
+- Browser Geolocation API.
+- Secure file uploads.
+- Responsive design.
+- Server-side validation.
+- Audit logging.
+
+Use environment variables for all API keys and credentials.
+
+Never expose secret keys in frontend code.
+
+Set the application timezone to Africa/Dar_es_Salaam.
+
+The interface language must be English.
+
+4. BRAND IDENTITY AND UI/UX DESIGN
+
+Application name: MUSTISO.
+
+Institution: Mbeya University of Science and Technology.
+
+Design a premium, modern university portal.
+
+Brand colors
+
+- Primary: Deep Navy Blue (#12304A).
+- Secondary: Academic Blue (#1C638A).
+- Accent: Gold (#E4B64D).
+- Background: Light Grey (#F3F6F9).
+- Text: Dark Navy (#172B3A).
+- White cards and clean surfaces.
+
+Design requirements
+
+Create:
+
+- Professional login page.
+- Registration page.
+- Modern dashboard.
+- Sidebar navigation.
+- Responsive mobile navigation.
+- Notification center.
+- User profile menu.
+- Search functionality.
+- Loading indicators.
+- Empty states.
+- Confirmation dialogs.
+- Error messages.
+- Success notifications.
+
+Use a professional university aesthetic.
+
+Avoid excessive animations and unnecessary decorative elements.
+
+The design must work on:
+
+- Android phones.
+- iPhones.
+- Tablets.
+- Laptops.
+- Desktop computers.
+
+Make the PWA installable where supported.
+
+5. USER ROLES AND ACCESS CONTROL
+
+Implement strict role-based access control.
+
+There are six main roles.
+
+A. STUDENT
+
+Students can:
+
+- Register accounts.
+- Log in.
+- View their profile.
+- Upload profile pictures.
+- View their registered course.
+- View modules.
+- Read announcements.
+- Download notes.
+- Read notes online.
+- Upload personal academic notes.
+- Submit assignments.
+- Participate in group discussions.
+- Mark attendance.
+- View their attendance history.
+- View their marks.
+- View GPA.
+- View academic performance trends.
+- Find available venues.
+- Submit feedback.
+
+Students must NOT access:
+
+- Internal CR management information.
+- Lecturer administration dashboards.
+- Board dashboards.
+- Principal dashboards.
+- Other students' confidential academic records.
+- Restricted university management data.
+
+B. COURSE REPRESENTATIVE (CR)
+
+CRs must have student accounts with additional authorized permissions.
+
+They can:
+
+- View their assigned course.
+- Publish course announcements.
+- Monitor class attendance.
+- Generate authorized emergency attendance codes when a lecturer is absent.
+- Record justified manual attendance.
+- Manage class communication.
+- View course-level attendance statistics.
+- Report attendance irregularities.
+
+CRs cannot:
+
+- Change official marks.
+- Change GPA.
+- Access principal or board dashboards.
+- Access lecturer confidential information.
+- Modify official student registration records.
+
+C. LECTURER
+
+Lecturers can:
+
+- View assigned modules.
+- View their assigned courses.
+- Publish announcements.
+- Upload lecture slides.
+- Upload learning materials.
+- Create individual assignments.
+- Create group assignments.
+- Set assignment deadlines.
+- Create attendance sessions.
+- Generate attendance codes.
+- View attendance reports.
+- Enter assessment marks.
+- View module academic trends.
+- Manage module learning materials.
+- Reserve teaching venues.
+- View their teaching schedules.
+- Receive student feedback.
+
+Lecturers must NOT access:
+
+- Internal CR management dashboards.
+- Board administration.
+- Principal confidential management information.
+
+Lecturers must only access modules and courses assigned to them.
+
+D. UNIVERSITY BOARD
+
+Board members have institution-wide management access.
+
+They can:
+
+- View all academic departments.
+- View courses and modules.
+- View student attendance.
+- View lecturer attendance.
+- View academic performance.
+- Review GPA trends.
+- Review course performance.
+- Review module performance.
+- Review lecturer performance.
+- View university reports.
+- Manage authorized academic records.
+- Access administrative dashboards.
+- Review audit logs.
+
+E. PRINCIPAL
+
+The Principal has full institutional administrative privileges.
+
+The Principal can:
+
+- Access all university dashboards.
+- Manage users.
+- Approve and reject registration requests.
+- Manage CR appointments.
+- Manage lecturer accounts.
+- Manage Board accounts.
+- Manage courses.
+- Manage programmes.
+- Manage academic years.
+- Manage modules.
+- Manage academic records.
+- View all attendance records.
+- View lecturer attendance.
+- Review student performance.
+- Review GPA.
+- Edit authorized academic information.
+- Manage venues.
+- Review feedback.
+- Generate reports.
+- View system activity logs.
+
+F. SYSTEM ADMINISTRATOR
+
+The system administrator manages technical aspects:
+
+- User provisioning.
+- Database configuration.
+- Security settings.
+- Storage management.
+- Technical monitoring.
+- Backups.
+- System logs.
+
+The administrator must not automatically gain permission to alter official academic results without explicit authorization.
+
+SECURITY RULE
+
+Implement permissions on the backend using Supabase RLS and secure server-side authorization.
+
+Never rely only on hiding dashboard links.
+
+A user must not gain higher privileges by modifying browser code, changing URLs or editing frontend state.
+
+6. STUDENT REGISTRATION AND AUTHENTICATION
+
+Build a complete registration and login system.
+
+Student registration form
+
+Required fields:
+
+1. Registration Number.
+2. Full Name.
+3. Phone Number.
+4. Email Address (if available).
+5. Programme.
+6. Course.
+7. Department.
+8. Year of Study.
+9. Academic Year.
+10. Profile Picture.
+11. Password.
+12. Confirm Password.
+
+Registration workflow
+
+1. Student fills in the registration form.
+2. Validate all required fields.
+3. Check for duplicate registration numbers.
+4. Submit the account for approval.
+5. Account status becomes PENDING.
+6. Authorized administrator reviews the request.
+7. Administrator verifies the registration number and academic information against an authorized MUST student record.
+8. Administrator approves or rejects the request.
+9. Approved student receives access to MUSTISO.
+10. Rejected students receive an appropriate notification.
+
+Do not allow pending accounts to access protected academic information.
+
+Login
+
+Allow login using:
+
+- Registration Number + Password.
+- Phone Number + Password.
+
+Implement secure password hashing through the authentication provider, session management, password reset, logout and account recovery.
+
+Staff accounts must be provisioned and verified by authorized administrators.
+
+7. ANNOUNCEMENTS MODULE
+
+Build an announcements management system.
+
+CR permissions
+
+CRs can publish announcements to their assigned course.
+
+Lecturer permissions
+
+Lecturers can publish announcements to:
+
+- Assigned modules.
+- Assigned courses.
+- Authorized academic groups.
+
+Announcement features
+
+- Announcement title.
+- Description.
+- Author.
+- Date and time.
+- Target audience.
+- Attachments.
+- Read status.
+- Notification alerts.
+
+Students can view announcements relevant to their academic registration.
+
+Allow authorized administrators to publish institution-wide announcements.
+
+8. ATTENDANCE MANAGEMENT SYSTEM
+
+This is one of the most important modules.
+
+Build a secure real-time attendance management system.
+
+Lecturer attendance session
+
+1. Lecturer logs in.
+2. Selects an assigned module.
+3. Selects the course and class.
+4. Starts an attendance session.
+5. Selects or confirms the teaching venue.
+6. System generates a unique attendance code.
+7. The code remains valid for exactly 60 seconds.
+8. Students enter the code using their accounts.
+9. Backend verifies the attendance session.
+10. Backend verifies the student's enrolment.
+11. Backend checks the code expiration.
+12. Backend validates location information against the configured venue radius.
+13. Successful attendance is recorded against the student's registration number.
+
+Each attendance code must be unique, time-limited, session-specific and protected against reuse.
+
+Never implement attendance validation exclusively in frontend JavaScript.
+
+GPS verification
+
+Request location permission from the student's device.
+
+Capture:
+
+- Latitude.
+- Longitude.
+- GPS accuracy.
+- Check-in timestamp.
+
+Compare the student's location against the approved attendance venue coordinates.
+
+Allow administrators to configure the acceptable radius.
+
+If GPS is disabled, inaccurate or unavailable, show a clear error and provide an authorized manual verification procedure.
+
+Do not treat GPS alone as conclusive proof of physical presence. Include appropriate anti-spoofing measures and manual review.
+
+Late attendance
+
+When a student misses the one-minute code:
+
+- Student must request manual attendance.
+- CR or authorized Lecturer can review the request.
+- Authorized user records attendance.
+- Record the reason for lateness.
+- Record who approved it.
+- Save the time and date.
+
+Attendance statuses:
+
+- PRESENT.
+- LATE.
+- ABSENT.
+- EXCUSED.
+
+CR emergency attendance
+
+When a lecturer is absent or unable to create a session:
+
+- Authorized CR can create an emergency attendance session.
+- Emergency session must identify the CR who created it.
+- The system must record the reason.
+- The session must be flagged for lecturer or administrator review.
+- Emergency permissions must be limited to the assigned course.
+
+Lecturer attendance monitoring
+
+Principal and Board must be able to review lecturer attendance.
+
+Track:
+
+- Scheduled lecture.
+- Lecturer identity.
+- Assigned module.
+- Session start time.
+- Actual attendance evidence.
+- Cancelled sessions.
+- Missed sessions.
+- Administrative exceptions.
+
+Student attendance check-ins may provide supporting evidence of a class session, but must not automatically be treated as definitive proof of lecturer attendance.
+
+9. NOTES AND LEARNING MATERIALS
+
+Build a complete digital academic library.
+
+Organize materials by:
+
+University → Department → Programme → Course → Academic Year → Semester → Module.
+
+Each module must contain:
+
+- Lecturer Slides.
+- Lecture Notes.
+- General Notes.
+- Student Shared Notes.
+- Past Papers.
+- Reference Materials.
+- Assignments.
+- Group Discussions.
+
+Lecturer functions
+
+Lecturers can:
+
+- Upload PDF files.
+- Upload PowerPoint presentations.
+- Upload documents.
+- Add descriptions.
+- Organize materials by module.
+- Replace outdated files.
+- Remove materials according to permissions.
+
+Student functions
+
+Students can:
+
+- Read notes online.
+- Download notes.
+- Upload personal notes.
+- Share educational notes.
+- Search notes.
+- Filter by module.
+- View upload dates.
+- View contributors.
+
+Include moderation and copyright controls for shared materials.
+
+10. ASSIGNMENT MANAGEMENT
+
+Build a complete assignment management system.
+
+Individual assignments
+
+Lecturers can:
+
+- Create assignments.
+- Select modules.
+- Add instructions.
+- Attach supporting files.
+- Set deadlines.
+- Set maximum marks.
+
+Students can:
+
+- Read assignments.
+- Upload submissions.
+- View deadlines.
+- View submission status.
+- View feedback.
+- View marks when released.
+
+Group discussions
+
+Support:
+
+- Group creation.
+- Group membership.
+- Group assignment instructions.
+- Shared file submissions.
+- Discussion threads.
+- Lecturer feedback.
+- Group marks.
+
+Prevent unauthorized editing of submitted work.
+
+Record submission timestamps.
+
+11. PERSONAL TREND — STUDENT ANALYTICS
+
+Build an individual academic performance dashboard.
+
+Each student should see their own academic statistics.
+
+Display:
+
+- Attendance percentage.
+- Test marks.
+- Assignment marks.
+- Presentation marks.
+- Examination marks.
+- Module averages.
+- Semester GPA.
+- Annual GPA.
+- Cumulative GPA.
+- Academic progression.
+
+Use:
+
+- Line charts.
+- Bar charts.
+- Progress indicators.
+- Performance summaries.
+
+Allow students to compare their academic progress across academic years without exposing other students' confidential marks.
+
+GPA calculation
+
+Create a configurable grading and GPA engine.
+
+Do not invent MUST's official grading scale.
+
+Allow authorized administrators to configure:
+
+- Grade boundaries.
+- Grade points.
+- Module credit units.
+- Assessment weights.
+- Semester calculation rules.
+- Annual GPA rules.
+- Cumulative GPA rules.
+
+Ensure calculations follow the officially approved MUST academic regulations.
+
+Store historical results so that previous academic years remain accurate.
+
+12. LECTURER MANAGEMENT
+
+Create a dedicated lecturer directory and dashboard.
+
+Display:
+
+- Lecturer name.
+- Profile photo.
+- Department.
+- Academic qualifications, if authorized.
+- Assigned courses.
+- Assigned modules.
+- Teaching schedule.
+- Office information, if available.
+
+Allow authorized administrators to assign lecturers to modules.
+
+Lecturers must only manage their assigned modules.
+
+13. FIND VENUE — CAMPUS ENVIRONMENT AND VENUE DISCOVERY
+
+Create a dedicated feature called:
+
+FIND VENUE
+
+This is a major feature of MUSTISO.
+
+Its purpose is to help students and lecturers discover university venues, understand their locations and identify available teaching spaces.
+
+Venue directory
+
+Each venue must have:
+
+1. Venue Name.
+2. Venue Code.
+3. Venue Photo.
+4. Short Description.
+5. Building Name.
+6. Campus Location.
+7. Capacity.
+8. Venue Type.
+9. Facilities.
+10. Accessibility Information.
+11. Current Booking Status.
+
+Venue categories
+
+Support:
+
+- Lecture Halls.
+- Classrooms.
+- Computer Laboratories.
+- Science Laboratories.
+- Seminar Rooms.
+- Conference Rooms.
+- Libraries.
+- Sports Facilities.
+- Other University Facilities.
+
+Venue visual presentation
+
+Use attractive venue cards with:
+
+- Actual venue photograph.
+- Venue name.
+- Short description.
+- Capacity.
+- Location.
+- Availability badge.
+
+Allow students to open a venue to read more details.
+
+Use approved real MUST venue photographs when available. Do not fabricate official campus photographs or pretend sample images represent actual MUST facilities.
+
+Provide an administration interface to upload and manage official venue photographs.
+
+FIND FREE VENUE
+
+Implement a venue availability engine.
+
+Users must be able to:
+
+- Search by venue name.
+- Search by building.
+- Filter by capacity.
+- Filter by venue type.
+- Select date.
+- Select starting time.
+- Select ending time.
+- View FREE venues.
+- View OCCUPIED venues.
+
+Lecturer venue booking
+
+Lecturers can:
+
+1. Open FIND VENUE.
+2. Select a date.
+3. Select a time.
+4. Search for an available venue.
+5. View venue details.
+6. Request or confirm a booking according to university policy.
+
+Availability logic
+
+A venue is FREE only when no approved booking or scheduled class overlaps the requested time.
+
+A venue is OCCUPIED when an approved booking or scheduled class overlaps the requested time.
+
+Prevent double booking.
+
+Use database-level conflict protection and server-side validation.
+
+Support:
+
+- Current availability.
+- Future availability.
+- Daily timetable.
+- Weekly timetable.
+- Booking history.
+
+Do not use static FREE or OCCUPIED labels in the production system.
+
+The venue availability must come from actual timetable and booking records.
+
+Include venue administration tools for Principal and authorized administrators.
+
+14. PRINCIPAL AND BOARD ANALYTICS
+
+Build a comprehensive institutional management dashboard.
+
+Display:
+
+Student analytics
+
+- Total students.
+- Students by programme.
+- Students by course.
+- Students by academic year.
+- Attendance percentages.
+- Academic performance.
+- GPA distribution.
+
+Lecturer analytics
+
+- Total lecturers.
+- Assigned modules.
+- Teaching attendance.
+- Scheduled classes.
+- Missed classes.
+- Module performance.
+
+Course analytics
+
+- Course attendance trends.
+- Average assessment marks.
+- GPA trends.
+- Academic progression.
+
+Module analytics
+
+- Module attendance.
+- Test performance.
+- Assignment performance.
+- Presentation performance.
+- Examination results.
+- Pass and failure statistics.
+
+Reports
+
+Allow authorized administrators to:
+
+- Filter by academic year.
+- Filter by semester.
+- Filter by programme.
+- Filter by course.
+- Filter by module.
+- Filter by lecturer.
+- Export authorized reports to PDF and Excel.
+
+Include date filters and meaningful visualizations.
+
+15. FEEDBACK AND SUGGESTIONS
+
+Build a feedback system.
+
+Students can submit feedback to:
+
+- Lecturers.
+- CRs.
+- Administration.
+
+Support:
+
+- Identified feedback.
+- Confidential feedback.
+- Anonymous feedback where university policy permits.
+
+Include:
+
+- Feedback category.
+- Message.
+- Date.
+- Recipient.
+- Response status.
+- Administrative moderation.
+
+Prevent abuse, harassment and unauthorized disclosure of identities.
+
+16. NOTIFICATION SYSTEM
+
+Create a central notification system.
+
+Notify users about:
+
+- New announcements.
+- Attendance sessions.
+- Assignment deadlines.
+- New notes.
+- Marks released.
+- Registration approval.
+- Registration rejection.
+- Venue booking status.
+- Important university updates.
+
+Support in-app notifications first.
+
+Prepare the architecture for optional email and push notifications.
+
+17. DATABASE ARCHITECTURE
+
+Design a normalized PostgreSQL database.
+
+Create appropriate tables for:
+
+1. profiles
+2. user_roles
+3. student_records
+4. lecturer_records
+5. board_members
+6. programmes
+7. departments
+8. courses
+9. modules
+10. academic_years
+11. semesters
+12. student_enrolments
+13. lecturer_module_assignments
+14. course_representatives
+15. announcements
+16. announcement_reads
+17. attendance_sessions
+18. attendance_records
+19. attendance_requests
+20. learning_materials
+21. assignments
+22. assignment_submissions
+23. discussion_groups
+24. discussion_messages
+25. assessments
+26. student_marks
+27. grading_scales
+28. GPA_records
+29. venues
+30. venue_bookings
+31. feedback
+32. notifications
+33. audit_logs
+34. system_settings
+
+Use UUID primary keys where appropriate.
+
+Implement:
+
+- Foreign keys.
+- Unique constraints.
+- Database indexes.
+- Data validation.
+- Referential integrity.
+- Row Level Security.
+- Secure database functions.
+
+Avoid duplicate records.
+
+Maintain historical academic records.
+
+Use database transactions for important operations.
+
+18. SECURITY AND PRIVACY
+
+Security is a mandatory requirement.
+
+Implement:
+
+- Secure authentication.
+- Password reset.
+- Session expiration.
+- Role-based permissions.
+- Database Row Level Security.
+- Server-side authorization.
+- Secure file storage.
+- Input validation.
+- SQL injection protection.
+- XSS protection.
+- CSRF protection where applicable.
+- Rate limiting.
+- Secure error handling.
+- Audit logs.
+- Backup strategy.
+
+Protect:
+
+- Registration numbers.
+- Phone numbers.
+- Profile photographs.
+- Marks.
+- Attendance.
+- Academic records.
+- Staff information.
+
+Do not expose confidential information through public API responses.
+
+Do not allow students to modify official attendance or marks.
+
+All sensitive administrative changes must be logged.
+
+Design the application to support applicable Tanzanian data protection requirements and MUST information governance policies.
+
+19. ADMINISTRATION DASHBOARD
+
+Create an administration dashboard with:
+
+- Pending student registrations.
+- Approved accounts.
+- Rejected accounts.
+- User management.
+- Role assignments.
+- Programme management.
+- Course management.
+- Module management.
+- Academic year management.
+- Venue management.
+- Timetable management.
+- Assessment configuration.
+- Grading configuration.
+- Feedback management.
+- System reports.
+- Audit logs.
+
+Include confirmation dialogs for destructive actions.
+
+Never permanently delete official academic records without an authorized retention and archival procedure.
+
+20. REQUIRED APPLICATION PAGES
+
+Build the following routes:
+
+PUBLIC:
+
+- /
+- /login
+- /register
+- /forgot-password
+- /registration-status
+
+STUDENT:
+
+- /student/dashboard
+- /student/profile
+- /student/announcements
+- /student/attendance
+- /student/notes
+- /student/assignments
+- /student/trend
+- /student/find-venue
+- /student/feedback
+
+CR:
+
+- /cr/dashboard
+- /cr/announcements
+- /cr/attendance
+- /cr/course-management
+
+LECTURER:
+
+- /lecturer/dashboard
+- /lecturer/modules
+- /lecturer/attendance
+- /lecturer/assignments
+- /lecturer/materials
+- /lecturer/marks
+- /lecturer/venues
+- /lecturer/feedback
+
+BOARD:
+
+- /board/dashboard
+- /board/students
+- /board/lecturers
+- /board/courses
+- /board/modules
+- /board/reports
+
+PRINCIPAL:
+
+- /principal/dashboard
+- /principal/users
+- /principal/academic-management
+- /principal/attendance
+- /principal/results
+- /principal/venues
+- /principal/reports
+- /principal/audit-logs
+
+ADMIN:
+
+- /admin/dashboard
+- /admin/settings
+- /admin/security
+- /admin/storage
+
+All routes must enforce authentication and role authorization.
+
+21. DEVELOPMENT RULES
+
+Follow these strict development instructions:
+
+1. Build a complete application, not a static design.
+2. Use reusable React components.
+3. Use TypeScript throughout.
+4. Maintain a clean project structure.
+5. Use database-driven data.
+6. Implement real CRUD operations.
+7. Add proper form validation.
+8. Implement loading and error states.
+9. Add responsive mobile layouts.
+10. Avoid duplicated code.
+11. Use secure environment variables.
+12. Implement server-side validation.
+13. Do not use hardcoded student records as real data.
+14. Do not fabricate official MUST information.
+15. Do not simulate successful database operations.
+16. Never expose secret credentials.
+17. Write meaningful comments for complex business logic.
+18. Build maintainable and testable components.
+
+When external credentials are unavailable, create the integration configuration and explain how to connect them.
+
+22. DEVELOPMENT PHASES
+
+Build the system progressively.
+
+PHASE 1 — Foundation
+
+- Project setup.
+- Brand identity.
+- Responsive layout.
+- Navigation.
+- Login.
+- Registration.
+- Authentication.
+- User profiles.
+
+PHASE 2 — Database and Permissions
+
+- Supabase integration.
+- PostgreSQL schema.
+- User roles.
+- Account approval.
+- Row Level Security.
+- Secure storage.
+
+PHASE 3 — Academic Management
+
+- Programmes.
+- Courses.
+- Modules.
+- Academic years.
+- Semesters.
+- Student enrolment.
+- Lecturer assignments.
+
+PHASE 4 — Academic Operations
+
+- Announcements.
+- Attendance.
+- Notes.
+- Assignments.
+- Group discussions.
+- Marks.
+
+PHASE 5 — Analytics
+
+- Personal Trend.
+- GPA engine.
+- Course analytics.
+- Module analytics.
+- Principal dashboard.
+- Board dashboard.
+
+PHASE 6 — FIND VENUE
+
+- Venue directory.
+- Venue photographs.
+- Search.
+- Filters.
+- Timetable integration.
+- Booking.
+- Availability engine.
+
+PHASE 7 — Quality and Deployment
+
+- Security testing.
+- Permission testing.
+- Mobile testing.
+- Database testing.
+- Performance optimization.
+- PWA configuration.
+- Deployment documentation.
+
+23. TESTING REQUIREMENTS
+
+Create test cases for:
+
+- Student registration.
+- Duplicate registration numbers.
+- Account approval.
+- Login with registration number.
+- Login with phone number.
+- Unauthorized access.
+- Role restrictions.
+- Attendance code expiration.
+- Attendance duplication.
+- GPS validation.
+- Manual attendance.
+- Assignment submission.
+- Marks entry.
+- GPA calculation.
+- Venue booking conflicts.
+- Venue availability.
+- File upload permissions.
+
+Ensure one student cannot access another student's private marks.
+
+Ensure lecturers cannot access Board or Principal internal dashboards.
+
+Ensure students cannot access CR, Lecturer, Board or Principal internal dashboards.
+
+Ensure unauthorized users cannot change official records.
+
+24. FINAL DELIVERABLES
+
+Deliver:
+
+1. Complete responsive MUSTISO application.
+2. Functional frontend.
+3. Supabase integration.
+4. PostgreSQL database schema.
+5. Authentication.
+6. Account approval system.
+7. Role-based dashboards.
+8. Working CRUD operations.
+9. Secure attendance architecture.
+10. Notes and assignment management.
+11. Personal Trend dashboard.
+12. FIND VENUE system.
+13. Academic management dashboard.
+14. Documentation.
+15. Environment variable example file.
+16. Database migration files.
+17. Testing documentation.
+18. Deployment instructions.
+
+25. IMPORTANT EXECUTION INSTRUCTIONS
+
+Start by analyzing the entire specification.
+
+Then create the project architecture and implement the application.
+
+Do not attempt to build every feature as a superficial mockup.
+
+Prioritize a working foundation, authentication, database connectivity and role permissions before building advanced features.
+
+For each phase:
+
+- Implement the feature.
+- Connect it to the database where applicable.
+- Test it.
+- Fix errors.
+- Verify permissions.
+- Continue to the next phase.
+
+If the application becomes too large for one generation, continue in manageable implementation stages without removing previously completed functionality.
+
+Maintain a development checklist and track completed and pending modules.
+
+Do not claim a feature is production-ready unless it has been implemented and tested.
+
+Where official MUST data is unavailable, create clearly labelled sample data and provide an administration interface for importing verified data.
+
+Do not invent official university policies, grading rules, staff identities, venue locations or student records.
+
+ULTIMATE GOAL:
+
+Deliver MUSTISO as a secure, professional, scalable and fully functional university information management platform that connects all MUST students, Course Representatives, Lecturers, Board members and the Principal through one unified digital ecosystem.
+
+The finished system must be suitable for further institutional review, testing and eventual deployment at Mbeya University of Science and Technology.
+
+Begin development now with Phase 1, and proceed systematically through all phases.

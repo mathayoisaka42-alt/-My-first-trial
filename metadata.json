@@ -1,0 +1,6 @@
+{
+  "name": "MUSTISO — MUST Information System",
+  "description": "Mbeya University of Science and Technology unified academic and campus information management platform.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
